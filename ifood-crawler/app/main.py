@@ -40,5 +40,8 @@ def find_item(term):
             new_item['merchant_id'] = item['merchant']['id']
             new_item['merchant_name'] = item['merchant']['name']
 
+            if (len(item['merchant']['resources']) > 0):
+                new_item['image_url'] = 'https://static-images.ifood.com.br/image/upload/t_high/pratos/' + item['merchant']['resources'][0]['fileName']
+
             result.append(new_item)
     return result
