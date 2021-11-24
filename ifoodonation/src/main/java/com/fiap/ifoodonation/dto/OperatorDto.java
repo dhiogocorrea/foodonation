@@ -17,16 +17,14 @@ public class OperatorDto {
 	private String cpf;
 	
 	String frontPicture;
-	String sidePicture;
+	
+	String selfieWithDocumentPicture;
 	
 	String frontDocumentPicture;
 	String backDocumentPicture;
 
 	private String pixKey;
-
-
-	@Temporal(TemporalType.TIMESTAMP)
-	private Date createdIn;
+	private String pixKeyType;
 
 	public OperatorDto() {}
 
@@ -86,20 +84,20 @@ public class OperatorDto {
 		this.frontPicture = frontPicture;
 	}
 
-	public String getSidePicture() {
-		return sidePicture;
-	}
-
-	public void setSidePicture(String sidePicture) {
-		this.sidePicture = sidePicture;
-	}
-
 	public String getFrontDocumentPicture() {
 		return frontDocumentPicture;
 	}
 
 	public void setFrontDocumentPicture(String frontDocumentPicture) {
 		this.frontDocumentPicture = frontDocumentPicture;
+	}
+
+	public String getSelfieWithDocumentPicture() {
+		return selfieWithDocumentPicture;
+	}
+
+	public void setSelfieWithDocumentPicture(String selfieWithDocumentPicture) {
+		this.selfieWithDocumentPicture = selfieWithDocumentPicture;
 	}
 
 	public String getBackDocumentPicture() {
@@ -118,11 +116,11 @@ public class OperatorDto {
 		this.pixKey = pixKey;
 	}
 
-	public Date getCreatedIn() {
-		return createdIn;
+	public String getPixKeyType() {
+		return pixKeyType;
 	}
 
-	public void setCreatedIn(Date createdIn) {
-		this.createdIn = createdIn;
+	public void setPixKeyType(String pixKeyType) {
+		this.pixKeyType = pixKeyType;
 	}
 }

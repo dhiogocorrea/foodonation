@@ -2,6 +2,7 @@ package com.fiap.ifoodonation.dao;
 
 import java.util.Date;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -42,6 +43,11 @@ public class WishlistItem {
 	private float price;
 	
 	private boolean bought;
+	
+	@Column(nullable = true)
+	private int quantity = 1;
+	
+	private String merchantName;
 	
 	
 	public WishlistItem() {
@@ -122,6 +128,22 @@ public class WishlistItem {
 
 	public void setBought(boolean bought) {
 		this.bought = bought;
+	}
+
+	public int getQuantity() {
+		return quantity;
+	}
+
+	public void setQuantity(int quantity) {
+		this.quantity = quantity;
+	}
+
+	public String getMerchantName() {
+		return merchantName;
+	}
+
+	public void setMerchantName(String merchantName) {
+		this.merchantName = merchantName;
 	}
 
 }

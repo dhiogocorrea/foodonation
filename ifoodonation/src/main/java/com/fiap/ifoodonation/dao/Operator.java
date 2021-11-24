@@ -47,6 +47,8 @@ public class Operator {
 	private boolean active;
 
 	private String pixKey;
+	
+	private String pixKeyType;
 
 
 	@Temporal(TemporalType.TIMESTAMP)
@@ -145,6 +147,14 @@ public class Operator {
 
 	public void setPixKey(String pixKey) {
 		this.pixKey = pixKey;
+	}
+
+	public String getPixKeyType() {
+		return pixKeyType;
+	}
+
+	public void setPixKeyType(String pixKeyType) {
+		this.pixKeyType = pixKeyType;
 	}
 
 	public Date getCreatedIn() {

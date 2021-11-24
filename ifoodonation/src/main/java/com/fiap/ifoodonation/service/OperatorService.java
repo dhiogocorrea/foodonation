@@ -5,7 +5,7 @@ import com.fiap.ifoodonation.dto.OperatorDto;
 
 public interface OperatorService {
 
-	Operator getMe();
+	Operator getMe(long operatorId);
 	Operator getByEmail(String email);
 	Operator create(OperatorDto operatorDto);
 	void lockOrder(long orderId, long operatorId);

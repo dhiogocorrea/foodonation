@@ -49,7 +49,7 @@ public class AuthenticationController {
 	}
 	
 	@RequestMapping(value = "/auth/operator", method = RequestMethod.POST)
-	public ResponseEntity<?> createAuthenticationTokenOperator(@RequestBody JwtRequest authenticationRequest) throws Exception {
+	public ResponseEntity<?> createAuthenticationTokenOp(@RequestBody JwtRequest authenticationRequest) throws Exception {
 		final UserDetails userDetails = jwtUserDetailsService
 				.loadUserByUsername("operator_____" + authenticationRequest.getEmail());
 		final String token = jwtTokenUtil.generateToken(userDetails, "operator");

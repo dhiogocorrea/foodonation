@@ -81,6 +81,7 @@ public class InstitutionServiceImpl implements InstitutionService {
 		Institution institution = getOne(institutionId);
 		
 		Address address = new Address();
+		address.setCountry(addressDto.getCountry());
 		address.setState(addressDto.getState());
 		address.setCity(addressDto.getCity());
 		address.setPostalCode(addressDto.getPostalCode());

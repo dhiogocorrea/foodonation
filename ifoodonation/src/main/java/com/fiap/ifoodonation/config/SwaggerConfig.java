@@ -1,6 +1,7 @@
 package com.fiap.ifoodonation.config;
 
 import java.util.Arrays;
+import java.util.Collections;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -12,8 +13,10 @@ import java.util.List;
 import io.swagger.models.auth.In;
 import springfox.documentation.builders.PathSelectors;
 import springfox.documentation.builders.RequestHandlerSelectors;
+import springfox.documentation.service.ApiInfo;
 import springfox.documentation.service.ApiKey;
 import springfox.documentation.service.AuthorizationScope;
+import springfox.documentation.service.Contact;
 import springfox.documentation.service.SecurityReference;
 import springfox.documentation.spi.DocumentationType;
 import springfox.documentation.spi.service.contexts.SecurityContext;
@@ -31,7 +34,18 @@ public class SwaggerConfig {
           .paths(PathSelectors.any())
           .build()
           .securitySchemes(Arrays.asList(new ApiKey("jwtToken", HttpHeaders.AUTHORIZATION, In.HEADER.name())))
-          .securityContexts(Arrays.asList(securityContext()));
+          .securityContexts(Arrays.asList(securityContext()))
+          .apiInfo(apiInfo());
+    }
+    
+    private ApiInfo apiInfo() {
+        return new ApiInfo(
+          "Foodonation API", 
+          "API that handles customer, institution and operator actions.", 
+          "API TOS", 
+          "Terms of service", 
+          new Contact("foodonation", "www.foodonation.com", "contato@foodonation.com"), 
+          "License of API", "API license URL", Collections.emptyList());
     }
     
     private SecurityContext securityContext() {

@@ -47,13 +47,13 @@ public class Order {
 	@Enumerated(EnumType.STRING)
 	private OrderStatus status;
 	
-	@OneToOne
+	@OneToOne(cascade=CascadeType.PERSIST)
 	private Picture recepitDelivering;
 	
-	@OneToOne
+	@OneToOne(cascade=CascadeType.PERSIST)
 	private Picture recepitConcluded;
 	
-	@OneToOne
+	@OneToOne(cascade=CascadeType.PERSIST)
 	private Picture recepitPaymentToOperator;
 	
 	private float totalPrice;

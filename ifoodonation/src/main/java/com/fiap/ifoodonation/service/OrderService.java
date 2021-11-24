@@ -8,6 +8,7 @@ public interface OrderService {
 
 	Iterable<Order> getAll();
 	Iterable<Order> getByCustomer(long customerId);
+	Iterable<Order> getByOperator(long operatorId);
 	OrderCreateDto getOne(long orderId);
 	Order create(OrderDto orderDto, long customerId);
 }

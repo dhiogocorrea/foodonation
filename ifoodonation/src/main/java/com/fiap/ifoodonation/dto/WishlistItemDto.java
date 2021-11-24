@@ -9,6 +9,10 @@ public class WishlistItemDto {
 	private String imageUrl;
 	
 	private float price;
+	
+	private int quantity;
+	
+	private String merchantName;
 
 	public String getProductName() {
 		return productName;
@@ -42,6 +46,18 @@ public class WishlistItemDto {
 		this.price = price;
 	}
 	
+	public int getQuantity() {
+		return quantity;
+	}
+	public void setQuantity(int quantity) {
+		this.quantity = quantity;
+	}
+	public String getMerchantName() {
+		return merchantName;
+	}
+	public void setMerchantName(String merchantName) {
+		this.merchantName = merchantName;
+	}
 	
 
 }

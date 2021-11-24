@@ -95,6 +95,8 @@ public class WishlistServiceImpl implements WishlistService {
 		wishlistItem.setProductDescription(wishlistItemDto.getProductDescription());
 		wishlistItem.setImageUrl(wishlistItemDto.getImageUrl());
 		wishlistItem.setPrice(wishlistItemDto.getPrice());
+		wishlistItem.setQuantity(wishlistItemDto.getQuantity());
+		wishlistItem.setMerchantName(wishlistItemDto.getMerchantName());
 		
 		wishlistItem.setWishlist(wishlist);		
 		wishlistItemRepository.save(wishlistItem);
